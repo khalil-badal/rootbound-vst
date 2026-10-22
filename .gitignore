@@ -12,3 +12,6 @@ renders/
 .vs/
 .vscode/
 *.zip
+
+# Old concept mockup (not the real UI)
+Rootbound UI.png
