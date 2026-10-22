@@ -1,4 +1,4 @@
-﻿# Rootbound â€” Granular Reverb (Khyle Audio)
+# Rootbound — Granular Reverb (Khyle Audio)
 
 Rootbound is a granular reverb plugin (VST3 + Standalone) built with JUCE and CMake.
 It combines a granular cloud engine with a dark, modulated "Blackhole-style" FDN wash.
@@ -6,32 +6,32 @@ It combines a granular cloud engine with a dark, modulated "Blackhole-style" FDN
 ![Rootbound UI](docs/rootbound-ui.png)
 
 ## Signal flow
-Input gain â†’ dry (zero latency) / wet split â†’ **2Ã— oversampled grain engine**
+Input gain → dry (zero latency) / wet split → **2× oversampled grain engine**
 (capture buffer, anti-alias mipmap, Hermite-interpolated windowed grains, Sustain bed,
-pre-delayed 8-line modulated FDN wash with input diffusion, regen feedback) â†’
-Diffuser (modulated allpasses) â†’ Tilt EQ â†’ Character saturator (2Ã— oversampled) â†’
-equal-power dry/wet mix â†’ output gain â†’ soft safety knee.
+pre-delayed 8-line modulated FDN wash with input diffusion, regen feedback) →
+Diffuser (modulated allpasses) → Tilt EQ → Character saturator (2× oversampled) →
+equal-power dry/wet mix → output gain → soft safety knee.
 
 ## Controls
 | Control | What it does |
 |---|---|
-| Grain Size / Grain Density | Grain length (10â€“500 ms, tempo-syncable) and how often grains fire |
+| Grain Size / Grain Density | Grain length (10–500 ms, tempo-syncable) and how often grains fire |
 | Diffusion | Grain scatter/detune/drift, wash level and allpass smearing |
 | Sustain | Steady two-grain unison bed under the cloud (0 = off) |
-| Pitch Snap | Cloud interval snapped to Unison / 4ths / 5ths / octaves (Â±2 oct) |
+| Pitch Snap | Cloud interval snapped to Unison / 4ths / 5ths / octaves (±2 oct) |
 | Decay | Tail length (default 4 s, tempo-syncable via SYNC) |
 | Mix | Equal-power dry/wet |
 | Tone / Character | Tilt EQ and tanh saturation (Character 0 = transparent) |
-| Input / Output | Gain staging (Â±12 dB) |
+| Input / Output | Gain staging (±12 dB) |
 | Grain Mode | Cloud, Scatter, Shimmer, Pulse, Swarm, Reactive |
 | Grain Env | Auto, Smooth, Swell, Pluck grain envelopes |
-| Reactive band | Reactivity, Burst, Arp Mode, Playback (active in Reactive mode) â€” see [REACTIVE_NOTES.md](REACTIVE_NOTES.md) |
+| Reactive band | Reactivity, Burst, Arp Mode, Playback (active in Reactive mode) — see [REACTIVE_NOTES.md](REACTIVE_NOTES.md) |
 | Freeze / Random | Hold the buffer / randomise the patch (Pitch Snap is never randomised) |
 
 Right-click the UI for Small / Medium / Large sizes.
 
 ## Building (Windows)
-Requirements: CMake â‰¥ 3.22, Visual Studio Build Tools 2022, JUCE at `C:/JUCE`
+Requirements: CMake ≥ 3.22, Visual Studio Build Tools 2022, JUCE at `C:/JUCE`
 (or pass `-DJUCE_PATH=...`).
 
 ```bash
