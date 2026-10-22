@@ -1,0 +1,14 @@
+# Build output
+build/
+out/
+*.vst3
+
+# Local renders / test audio
+renders/
+*.wav
+
+# Local tooling / archives
+.claude/
+.vs/
+.vscode/
+*.zip
